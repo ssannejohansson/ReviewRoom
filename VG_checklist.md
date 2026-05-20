@@ -28,20 +28,20 @@ VG extras:
 DEPLOYMENT
 --------------------------------------------- */
 
-- [ ] Backend deployed and publicly accessible via URL
-- [ ] Frontend deployed and publicly accessible via URL
-- [ ] Deployed backend uses HTTPS
-- [ ] All API routes work correctly from the cloud backend
+- [x] Backend deployed and publicly accessible via URL
+- [x] Frontend deployed and publicly accessible via URL
+- [x] Deployed backend uses HTTPS
+- [x] All API routes work correctly from the cloud backend
 
 /* ------------------------------------------
 AUTHENTICATION IN PRODUCTION
 --------------------------------------------- */
 
-- [ ] Login and logout work on the deployed app
-- [ ] Firebase redirect URIs updated to deployed URLs (not localhost)
-- [ ] CORS restricted to the deployed frontend URL (not `*`)
-- [ ] Tokens NOT stored in `localStorage` — use cookies or secure session storage
-- [ ] `withCredentials: true` used on all authenticated frontend requests
+- [x] Login and logout work on the deployed app
+- [x] Firebase redirect URIs updated to deployed URLs (not localhost)
+- [x] CORS restricted to the deployed frontend URL (not `*`)
+- [x] Tokens NOT stored in `localStorage` — use cookies or secure session storage
+- [x] `withCredentials: true` used on all authenticated frontend requests
 
 /* ------------------------------------------
 TESTING
@@ -52,7 +52,7 @@ TESTING
 - [x] At least 2 new tests added that verify production-like behavior
   - e.g. deployed API returns correct CORS headers
   - e.g. Docker container starts correctly and responds to requests
-- [ ] All tests pass in the CI pipeline
+- [x] All tests pass in the CI pipeline
 
 /* ------------------------------------------
 GITHUB ACTIONS PIPELINE
@@ -70,7 +70,7 @@ VG extra:
 FRONTEND (PRODUCTION)
 --------------------------------------------- */
 
-- [ ] Frontend connected to deployed backend URL (not localhost)
+- [x] Frontend connected to deployed backend URL (not localhost)
 - [ ] Loading states handled gracefully
 - [ ] Error states handled gracefully
 
@@ -80,11 +80,11 @@ SECURITY (PRODUCTION FOCUS)
 
 - [x] No secrets committed to the repo
 - [x] All sensitive values in `.env` and GitHub Secrets
-- [ ] CORS restricted to deployed frontend URL
-- [ ] Tokens never in `localStorage`
-- [ ] `withCredentials: true` on all authenticated requests
+- [x] CORS restricted to deployed frontend URL
+- [x] Tokens never in `localStorage`
+- [x] `withCredentials: true` on all authenticated requests
 - [x] Docker image does not contain `.env` or `node_modules`
-- [ ] Authentication callbacks use deployed URL, not `localhost`
+- [x] Authentication callbacks use deployed URL, not `localhost`
 
 /* ------------------------------------------
 README & REFLECTION
@@ -104,7 +104,7 @@ PRESENTATION (June 4)
 --------------------------------------------- */
 
 - [x] Live demo: app running locally with Docker
-- [ ] Live demo: app running on deployed cloud URL
-- [ ] Live demo: login and accessing protected content
+- [x] Live demo: app running on deployed cloud URL
+- [x] Live demo: login and accessing protected content
 - [ ] Can explain deployment choices and trade-offs
 - [ ] GitHub repo with updated README ready to share
