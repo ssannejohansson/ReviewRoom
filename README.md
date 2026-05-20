@@ -14,6 +14,13 @@ The API exposes these routes:
 - `POST /shows` - protected
 - `POST /shows/:id/reviews` - protected
 
+## Deployed URLs
+
+| Service  | URL |
+|----------|-----|
+| Backend  | `[ADD RENDER URL HERE]` |
+| Frontend | `[ADD VERCEL URL HERE]` |
+
 ## Setup
 
 ### 1. Clone the repository
@@ -48,8 +55,9 @@ Use the example files as a template:
 
 For the backend, make sure the following values are configured:
 
-- `PORT=3001`
+- `PORT=3000`
 - `CORS_ORIGIN=http://localhost:5500`
+- `DATABASE_URL=postgresql://your-username@localhost:5432/reviewroom`
 - `FIREBASE_PROJECT_ID`
 - `FIREBASE_PRIVATE_KEY`
 - `FIREBASE_CLIENT_EMAIL`
@@ -73,6 +81,35 @@ npx serve src -l 5500
 ```
 
 Then open the frontend in your browser and use the login form to authenticate.
+
+Before running locally for the first time, run the database migration and seed:
+
+```bash
+cd backend
+npx prisma migrate dev
+npx prisma db seed
+```
+
+### 5. Run with Docker
+
+Make sure Docker Desktop is running, then from the project root:
+
+```bash
+docker-compose up --build
+```
+
+This starts three containers: the backend (port 3000), the frontend via nginx (port 5500), and a PostgreSQL database (port 5433).
+
+On first run, apply the migration and seed the database:
+
+```bash
+docker-compose exec backend npx prisma migrate deploy
+docker-compose exec backend npx prisma db seed
+```
+
+Then open:
+- Frontend: http://localhost:5500
+- API: http://localhost:3000/shows
 
 ## Testing
 
@@ -138,11 +175,33 @@ Why these choices matter:
 - They reduce the chance of leaking credentials in the repo.
 - They keep the frontend and backend loosely coupled, which is useful for testing and CI.
 
+## Deployment Reflections
+
+**Why did you choose this deployment platform?**
+
+[ADD YOUR ANSWER — e.g. why Render for backend, Vercel for frontend. What alternatives did you consider?]
+
+**What challenges did you face with Docker?**
+
+[ADD YOUR ANSWER — e.g. ESM module resolution, Prisma generate step, multi-stage build issues]
+
+**How did you handle environment variables and secrets in production?**
+
+[ADD YOUR ANSWER — e.g. Render environment variables dashboard, GitHub Secrets for CI, .env.example for local setup. Why secrets are never committed.]
+
+**What would you do differently with one more week?**
+
+[ADD YOUR ANSWER]
+
+**How did you ensure authentication works after deployment?**
+
+[ADD YOUR ANSWER — e.g. updating Firebase redirect URIs, updating CORS_ORIGIN to deployed frontend URL]
+
 ## Reflections
 
 Implementation choices:
 
-- An in-memory data store was used so the assignment stays focused on routing, testing, and authentication instead of database setup.
+- PostgreSQL with Prisma was used as the database. This gives the app real persistence across restarts and deploys, and makes the docker-compose setup more realistic.
 - The backend uses small route handlers and straightforward validation so the tests can target behavior directly.
 - The frontend stays intentionally simple: login, logout, public show browsing, and protected create/review actions.
 
