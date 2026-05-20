@@ -94,6 +94,10 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     // Grab values from input fields.
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const btn = document.getElementById("login-btn");
+
+    btn.disabled = true; // Disable button to prevent multiple clicks
+    btn.textContent = "Logging in...";
 
     try {
         // Firebase signs the user in
@@ -103,6 +107,9 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         // Show error message if login fails
         loginError.textContent = renderError(err.message);
         loginError.classList.remove("hidden");
+    } finally {
+        btn.disabled = false; // Re-enable button
+        btn.textContent = "Log in";
     }
 });
 
@@ -311,6 +318,10 @@ document.getElementById("add-review-btn").addEventListener("click", async () => 
     const rating = document.getElementById("review-rating").value;
     const title = document.getElementById("review-title-input").value;
     const comment = document.getElementById("review-body").value;
+    const btn = document.getElementById("add-review-btn");
+
+    btn.disabled = true;
+    btn.textContent = "Submitting...";
 
     const ratingError = document.getElementById("rating-error");
     if (!rating) {
@@ -344,6 +355,9 @@ document.getElementById("add-review-btn").addEventListener("click", async () => 
     } catch (err) {
         showError.textContent = renderError(err.message);
         showError.classList.remove("hidden");
+    } finally {
+        btn.disabled = false;
+        btn.textContent = "Submit Review";
     }
 });
 
@@ -371,6 +385,10 @@ document.getElementById("add-show-btn").addEventListener("click", async () => {
     const imageUrl = document.getElementById("show-image-url").value;
     const description = document.getElementById("show-description").value;
 
+    const btn = document.getElementById("add-show-btn");
+    btn.disabled = true;
+    btn.textContent = "Adding...";
+    
     try {
         // POST /shows is protected, send bearer token in header
         await fetch(`${API}/shows`, {
@@ -394,6 +412,9 @@ document.getElementById("add-show-btn").addEventListener("click", async () => {
     } catch (err) {
         showError.textContent = renderError(err.message);
         showError.classList.remove("hidden");
+    } finally {
+        btn.disabled = false;
+        btn.textContent = "Add Show";
     }
 });
 
