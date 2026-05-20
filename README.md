@@ -26,8 +26,8 @@ The API exposes these routes:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ssannejohansson/Assesssment3.git
-cd Assesssment3
+git clone https://github.com/ssannejohansson/ReviewRoom.git
+cd ReviewRoom
 ```
 
 ### 2. Install dependencies
