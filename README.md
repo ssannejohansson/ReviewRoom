@@ -18,8 +18,8 @@ The API exposes these routes:
 
 | Service  | URL |
 |----------|-----|
-| Backend  | `[ADD RENDER URL HERE]` |
-| Frontend | `[ADD VERCEL URL HERE]` |
+| Backend  | `https://assesssment3.onrender.com` |
+| Frontend | `https://reviewroom.vercel.app` |
 
 ## Setup
 
@@ -179,23 +179,23 @@ Why these choices matter:
 
 **Why did you choose this deployment platform?**
 
-[ADD YOUR ANSWER — e.g. why Render for backend, Vercel for frontend. What alternatives did you consider?]
+I choose Render for the backend because it seemed easy to set up with Node and PostgreSQL in the same place. I used Vercel for the frontend since it was presented for us.
 
 **What challenges did you face with Docker?**
 
-[ADD YOUR ANSWER — e.g. ESM module resolution, Prisma generate step, multi-stage build issues]
+The only challenge i faced was some trouble with ESM modules and extensions at imports to make sure Prisma generated correct during the build. 
 
 **How did you handle environment variables and secrets in production?**
 
-[ADD YOUR ANSWER — e.g. Render environment variables dashboard, GitHub Secrets for CI, .env.example for local setup. Why secrets are never committed.]
+I stored sensitive values (like Firebase credentials and db url)in Render Env and Github Secrets. 
 
 **What would you do differently with one more week?**
 
-[ADD YOUR ANSWER]
+I would improve validation on protected routes, like checking that ratings are between 1-5. I would also add user registration instead of only using a demo account. 
 
 **How did you ensure authentication works after deployment?**
 
-[ADD YOUR ANSWER — e.g. updating Firebase redirect URIs, updating CORS_ORIGIN to deployed frontend URL]
+I added the deployed frontend URL to Firebase Authorized Domains and updated the backend CORS settings. The frontend also requests a new Firebase token for protected routes, so authentication works the same in production as locally. 
 
 ## Reflections
 
@@ -203,7 +203,7 @@ Implementation choices:
 
 - PostgreSQL with Prisma was used as the database. This gives the app real persistence across restarts and deploys, and makes the docker-compose setup more realistic.
 - The backend uses small route handlers and straightforward validation so the tests can target behavior directly.
-- The frontend stays intentionally simple: login, logout, public show browsing, and protected create/review actions.
+- The frontend stays intentionally simple: login, logout, public show API and protected create/review actions.
 
 What was challenging:
 
@@ -214,7 +214,6 @@ What was challenging:
 What would implement next:
 
 - I would add input validation on the backend (e.g. reject reviews with a rating outside 1–5, or shows missing required fields) to make the API more robust.
-- I would extract the in-memory data store behind a proper repository interface so it could be swapped for a real database without touching the controllers.
 - I would add more granular error handling on the frontend so each view shows its own error message rather than sharing a single error element.
 - I would add a registration flow so new users can sign up directly in the app rather than relying on a pre-created demo account.
 - I would implement search and filtering on the shows list so users can find a specific show without scrolling through the entire grid.

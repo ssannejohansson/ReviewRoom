@@ -64,7 +64,7 @@ GITHUB ACTIONS PIPELINE
 - [x] Pipeline shows clear pass/fail result
 
 VG extra:
-- [ ] Pipeline automatically deploys to cloud on push
+- [x] Pipeline automatically deploys to cloud on push
 
 /* ------------------------------------------
 FRONTEND (PRODUCTION)
