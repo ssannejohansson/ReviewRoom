@@ -1,4 +1,4 @@
-import { shows, Show, Review } from "../data.js";
+import { prisma } from "../lib/prisma.js";
 
 /* -----------------------
 TYPES - SERVICE INPUTS
@@ -24,51 +24,45 @@ SERVICE METHODS
 ----------------------- */
 
 // Returns all shows
-export const getAllShows = (): Show[] => {
-  return shows;
-};
+export const getAllShows = () =>
+  prisma.show.findMany({
+    include: { reviews: true },
+    orderBy: { createdAt: "desc" },
+  });
 
 // Returns a single show by id, or null if not found
-export const getShowById = (id: string): Show | null => {
-  return shows.find((s) => s.id === id) ?? null;
-};
+export const getShowById = (id: string) =>
+  prisma.show.findUnique({
+    where: { id },
+    include: { reviews: true },
+  });
 
-// Creates a new show and adds it to the store
-export const createShow = (input: CreateShowInput): Show => {
-  const newShow: Show = {
-    id: String(shows.length + 1),
-    title: input.title,
-    description: input.description,
-    genre: input.genre,
-    year: input.year,
-    imageUrl: input.imageUrl || "https://placehold.co/500x750?text=No+Image",
-    reviews: [],
-    createdAt: new Date().toISOString(),
-    createdBy: input.createdBy,
-  };
-
-  shows.push(newShow);
-  return newShow;
-};
+// Creates a new show and adds it to the database
+export const createShow = (input: CreateShowInput) =>
+  prisma.show.create({
+    data: {
+      title: input.title,
+      description: input.description,
+      genre: input.genre,
+      year: input.year,
+      imageUrl: input.imageUrl || "https://placehold.co/500x750?text=No+Image",
+      createdBy: input.createdBy,
+    },
+    include: { reviews: true },
+  });
 
 // Adds a review to a show — returns the review or null if show not found
-export const addReview = (
-  showId: string,
-  input: AddReviewInput,
-): Review | null => {
-  const show = shows.find((s) => s.id === showId);
-
+export const addReview = async (showId: string, input: AddReviewInput) => {
+  const show = await prisma.show.findUnique({ where: { id: showId } });
   if (!show) return null;
 
-  const newReview: Review = {
-    id: String(show.reviews.length + 1),
-    title: input.title,
-    rating: input.rating,
-    comment: input.comment,
-    author: input.author,
-    createdAt: new Date().toISOString(),
-  };
-
-  show.reviews.push(newReview);
-  return newReview;
+  return prisma.review.create({
+    data: {
+      title: input.title,
+      author: input.author,
+      rating: input.rating,
+      comment: input.comment,
+      showId,
+    },
+  });
 };
