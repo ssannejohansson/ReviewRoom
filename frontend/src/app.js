@@ -32,7 +32,7 @@ const auth = getAuth(app);
 CONSTANTS
 ---------------------- */
 
-const API = "http://localhost:3000";
+const API = "https://assessment3.onrender.com";
 
 /* ----------------------
 DOM ELEMENTS
