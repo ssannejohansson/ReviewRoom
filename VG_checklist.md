@@ -5,8 +5,8 @@ PROJECT SETUP & REPOSITORY
 --------------------------------------------- */
 
 - [x] Folder structure: `/backend`, `/frontend`, `/docker` (or docker files in root)
-- [ ] `README.md` includes: install instructions, how to run locally, how to run with Docker
-- [ ] `README.md` includes deployed URLs (backend and frontend)
+- [x] `README.md` includes: install instructions, how to run locally, how to run with Docker
+- [x] `README.md` includes deployed URLs (backend and frontend)
 - [x] `.env.example` lists all environment variables — no secrets in the repo
 
 /* ------------------------------------------
@@ -90,14 +90,14 @@ SECURITY (PRODUCTION FOCUS)
 README & REFLECTION
 --------------------------------------------- */
 
-- [ ] Deployed URLs listed (backend and frontend)
-- [ ] Docker instructions: how to build and run
-- [ ] Security decisions explained with reasoning (the WHY, not just the what)
-- [ ] Answered: Why did you choose this deployment platform?
-- [ ] Answered: What challenges did you face with Docker?
-- [ ] Answered: How did you handle environment variables and secrets in production?
-- [ ] Answered: What would you do differently with one more week?
-- [ ] Answered: How did you ensure authentication works after deployment?
+- [x] Deployed URLs listed (backend and frontend)
+- [x] Docker instructions: how to build and run
+- [x] Security decisions explained with reasoning (the WHY, not just the what)
+- [x] Answered: Why did you choose this deployment platform?
+- [x] Answered: What challenges did you face with Docker?
+- [x] Answered: How did you handle environment variables and secrets in production?
+- [x] Answered: What would you do differently with one more week?
+- [x] Answered: How did you ensure authentication works after deployment?
 
 /* ------------------------------------------
 PRESENTATION (June 4)
