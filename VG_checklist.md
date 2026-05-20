@@ -4,25 +4,25 @@
 PROJECT SETUP & REPOSITORY
 --------------------------------------------- */
 
-- [ ] Folder structure: `/backend`, `/frontend`, `/docker` (or docker files in root)
+- [x] Folder structure: `/backend`, `/frontend`, `/docker` (or docker files in root)
 - [ ] `README.md` includes: install instructions, how to run locally, how to run with Docker
 - [ ] `README.md` includes deployed URLs (backend and frontend)
-- [ ] `.env.example` lists all environment variables — no secrets in the repo
+- [x] `.env.example` lists all environment variables — no secrets in the repo
 
 /* ------------------------------------------
 DOCKER & CONTAINERIZATION
 --------------------------------------------- */
 
-- [ ] `Dockerfile` written for backend
-- [ ] `Dockerfile` written for frontend (if separate)
-- [ ] App runs without relying on locally installed Node.js
-- [ ] `node_modules` NOT included in Docker image (`.dockerignore`)
-- [ ] `.env` files NOT included in Docker image
-- [ ] `docker build` and `docker run` produce a working app
+- [x] `Dockerfile` written for backend
+- [x] `Dockerfile` written for frontend (if separate)
+- [x] App runs without relying on locally installed Node.js
+- [x] `node_modules` NOT included in Docker image (`.dockerignore`)
+- [x] `.env` files NOT included in Docker image
+- [x] `docker build` and `docker run` produce a working app
 
 VG extras:
-- [ ] `docker-compose.yml` orchestrates backend + frontend (+ optional database)
-- [ ] Multi-stage build used to keep image size small
+- [x] `docker-compose.yml` orchestrates backend + frontend (+ optional database)
+- [x] Multi-stage build used to keep image size small
 
 /* ------------------------------------------
 DEPLOYMENT
@@ -47,9 +47,9 @@ AUTHENTICATION IN PRODUCTION
 TESTING
 --------------------------------------------- */
 
-- [ ] All existing unit tests still pass
-- [ ] All existing integration tests still pass
-- [ ] At least 2 new tests added that verify production-like behavior
+- [x] All existing unit tests still pass
+- [x] All existing integration tests still pass
+- [x] At least 2 new tests added that verify production-like behavior
   - e.g. deployed API returns correct CORS headers
   - e.g. Docker container starts correctly and responds to requests
 - [ ] All tests pass in the CI pipeline
@@ -58,10 +58,10 @@ TESTING
 GITHUB ACTIONS PIPELINE
 --------------------------------------------- */
 
-- [ ] Pipeline triggers on push to `main`
-- [ ] Pipeline installs dependencies and runs all tests
-- [ ] All secrets stored in GitHub Secrets, not hardcoded
-- [ ] Pipeline shows clear pass/fail result
+- [x] Pipeline triggers on push to `main`
+- [x] Pipeline installs dependencies and runs all tests
+- [x] All secrets stored in GitHub Secrets, not hardcoded
+- [x] Pipeline shows clear pass/fail result
 
 VG extra:
 - [ ] Pipeline automatically deploys to cloud on push
@@ -78,12 +78,12 @@ FRONTEND (PRODUCTION)
 SECURITY (PRODUCTION FOCUS)
 --------------------------------------------- */
 
-- [ ] No secrets committed to the repo
-- [ ] All sensitive values in `.env` and GitHub Secrets
+- [x] No secrets committed to the repo
+- [x] All sensitive values in `.env` and GitHub Secrets
 - [ ] CORS restricted to deployed frontend URL
 - [ ] Tokens never in `localStorage`
 - [ ] `withCredentials: true` on all authenticated requests
-- [ ] Docker image does not contain `.env` or `node_modules`
+- [x] Docker image does not contain `.env` or `node_modules`
 - [ ] Authentication callbacks use deployed URL, not `localhost`
 
 /* ------------------------------------------
@@ -103,7 +103,7 @@ README & REFLECTION
 PRESENTATION (June 4)
 --------------------------------------------- */
 
-- [ ] Live demo: app running locally with Docker
+- [x] Live demo: app running locally with Docker
 - [ ] Live demo: app running on deployed cloud URL
 - [ ] Live demo: login and accessing protected content
 - [ ] Can explain deployment choices and trade-offs
