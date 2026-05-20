@@ -1,12 +1,17 @@
 import { Request, Response } from "express";
-import { getAllShows, getShowById, createShow, addReview } from "../services/tv-shows.service.js";
+import {
+  getAllShows,
+  getShowById,
+  createShow,
+  addReview,
+} from "../services/tv-shows.service.js";
 
 /* -----------------------
 GET ALL SHOWS
 Public - no auth required
 ----------------------- */
-export const getShows = (req: Request, res: Response): void => {
-  const shows = getAllShows();
+export const getShows = async (req: Request, res: Response): Promise<void> => {
+  const shows = await getAllShows();
   res.status(200).json(shows);
 };
 
@@ -14,8 +19,8 @@ export const getShows = (req: Request, res: Response): void => {
 GET SHOW BY ID
 Public - no auth required
 ----------------------- */
-export const getShow = (req: Request, res: Response): void => {
-  const show = getShowById(req.params.id);
+export const getShow = async (req: Request, res: Response): Promise<void> => {
+  const show = await getShowById(req.params.id);
 
   if (!show) {
     res.status(404).json({ error: "Show not found" });
@@ -29,20 +34,18 @@ export const getShow = (req: Request, res: Response): void => {
 CREATE SHOW
 Protected - requires valid firebase token
 ----------------------- */
-export const postShow = (req: Request, res: Response): void => {
+export const postShow = async (req: Request, res: Response): Promise<void> => {
   const { title, description, genre, year, imageUrl } = req.body;
   const user = (req as any).user;
 
   if (!title || !description || !genre || !year) {
     res
       .status(400)
-      .json({
-        error: "title, description, genre, and year are required",
-      });
+      .json({ error: "title, description, genre, and year are required" });
     return;
   }
 
-  const newShow = createShow({
+  const newShow = await createShow({
     title,
     description,
     genre,
@@ -58,7 +61,10 @@ export const postShow = (req: Request, res: Response): void => {
 ADD REVIEW
 Protected - requires valid firebase token
 ----------------------- */
-export const postReview = (req: Request, res: Response): void => {
+export const postReview = async (
+  req: Request,
+  res: Response,
+): Promise<void> => {
   const { title, rating, comment } = req.body;
   const user = (req as any).user;
 
@@ -67,7 +73,7 @@ export const postReview = (req: Request, res: Response): void => {
     return;
   }
 
-  const review = addReview(req.params.id, {
+  const review = await addReview(req.params.id, {
     title,
     rating: Number(rating),
     comment,
@@ -84,12 +90,9 @@ export const postReview = (req: Request, res: Response): void => {
 
 /* -----------------------
 GET PROFILE
-Public - no auth required
+Protected - requires valid firebase token
 ----------------------- */
 export const getProfile = (req: Request, res: Response): void => {
   const user = (req as any).user;
-  res.status(200).json({
-    uid: user.uid,
-    email: user.email,
-  });
+  res.status(200).json({ uid: user.uid, email: user.email });
 };
