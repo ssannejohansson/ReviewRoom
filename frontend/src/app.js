@@ -276,9 +276,9 @@ const loadShowDetail = async (id) => {
         document.getElementById("add-review-btn").dataset.id = id;
         document.getElementById("review-show-name").textContent = show.title;
 
-        // Show write-review-btn only when logged in
-        const writeReviewBtn = document.getElementById("write-review-btn");
-        writeReviewBtn.classList.toggle("hidden", !auth.currentUser);
+        // Always show write-review-btn — modal handles auth for logged out users
+        document.getElementById("write-review-btn").classList.remove("hidden");
+        document.getElementById("login-hint").classList.toggle("hidden", !!auth.currentUser);
 
         // Reset to reviews tab
         activateTab("reviews");
@@ -318,6 +318,10 @@ WRITE REVIEW
 ---------------------- */
 
 document.getElementById("write-review-btn").addEventListener("click", () => {
+    if (!auth.currentUser) {
+        openLoginModal();
+        return;
+    }
     resetStarPicker();
     showView(viewWriteReview);
 });
