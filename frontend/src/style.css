@@ -502,6 +502,18 @@ DETAIL HERO
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .detail-hero {
+        flex-direction: column;
+        padding: 24px 24px 32px;
+        gap: 20px;
+    }
+
+    .detail-poster {
+        width: 140px;
+    }
+}
+
 .detail-info {
     display: flex;
     flex-direction: column;
