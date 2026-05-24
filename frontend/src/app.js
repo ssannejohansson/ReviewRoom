@@ -38,7 +38,6 @@ const API = "https://assesssment3.onrender.com";
 DOM ELEMENTS
 ---------------------- */
 
-const viewLogin = document.getElementById("login-view");
 const viewHome = document.getElementById("home-view");
 const viewDetail = document.getElementById("view-detail");
 const viewWriteReview = document.getElementById("write-review-view");
@@ -50,13 +49,15 @@ const loginError = document.getElementById("login-error");
 const showList = document.getElementById("shows-list");
 const showError = document.getElementById("shows-error");
 const addShowNavItem = document.getElementById("add-show-nav-item");
+const loginModal = document.getElementById("login-modal");
+const loginBtnNav = document.getElementById("login-btn-nav");
+const loginBtnMobile = document.getElementById("login-btn-mobile");
 
 /* ----------------------
 SHOW / HIDE VIEWS
 ---------------------- */
 
 const showView = (view) => {
-    viewLogin.classList.add("hidden");
     viewHome.classList.add("hidden");
     viewDetail.classList.add("hidden");
     viewWriteReview.classList.add("hidden");
@@ -67,6 +68,23 @@ const showView = (view) => {
 };
 
 /* ----------------------
+LOGIN MODAL
+---------------------- */
+
+const openLoginModal = () => loginModal.classList.remove("hidden");
+const closeLoginModal = () => loginModal.classList.add("hidden");
+
+loginBtnNav.addEventListener("click", openLoginModal);
+loginBtnNavMobile.addEventListener("click", openLoginModal);
+
+document.getElementById("close-login-modal").addEventListener("click", closeLoginModal);
+
+loginModal.addEventListener("click", (e) => {
+    if (e.target === loginModal) closeLoginModal();
+});
+
+
+/* ----------------------
 AUTH STATE
 ---------------------- */
 
@@ -74,15 +92,28 @@ onAuthStateChanged(auth, async (user) => {
     navUser.textContent = renderHeader(user);
 
     if (user) {
-        navbar.classList.remove("hidden");
+        loginBtnNav.classList.add("hidden");
+        loginBtnNavMobile.classList.add("hidden");
+        document.getElementById("logout-btn").classList.remove("hidden");
+        document.getElementById("mobile-logout").classList.remove("hidden");
+        document.getElementById("mobile-login").classList.add("hidden");
         addShowNavItem.classList.toggle("hidden", !isFormVisible(user));
-        showView(viewHome);
-        await loadShows();
+        closeLoginModal();
     } else {
-        navbar.classList.add("hidden");
-        showView(viewLogin);
+        loginBtnNav.classList.remove("hidden");
+        loginBtnNavMobile.classList.remove("hidden");
+        document.getElementById("logout-btn").classList.add("hidden");
+        document.getElementById("mobile-logout").classList.add("hidden");
+        document.getElementById("mobile-login").classList.remove("hidden");
+        addShowNavItem.classList.add("hidden");
     }
 });
+
+/* ----------------------
+INIT
+---------------------- */
+
+loadShows();
 
 /* ----------------------
 LOGIN
@@ -426,6 +457,12 @@ document.getElementById("profile-link").addEventListener("click", async (e) => {
     e.preventDefault();
     // Grab the current firebase user and their token
     const user = auth.currentUser;
+
+    if (!user) {
+        openLoginModal();
+        return;
+    }
+    
     const token = await user.getIdToken();
 
     try {
