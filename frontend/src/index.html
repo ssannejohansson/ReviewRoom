@@ -22,7 +22,7 @@
     <!----------------------
     NAVBAR
     ----------------------->
-    <nav id="navbar" class="hidden">
+    <nav id="navbar">
         <a id="nav-logo" href="#" class="logo">Review Room</a>
         <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
         <ul class="nav-links">
@@ -30,22 +30,21 @@
             <li><a id="shows-link" href="#">Shows</a></li>
             <li id="add-show-nav-item" class="hidden"><a id="add-show-link" href="#">Add Show</a></li>
             <li><a id="profile-link" href="#">Profile</a></li>
+            <li id="mobile-login"><button id="login-btn-mobile">Log in</button></li>
             <li id="mobile-logout"><button id="logout-btn-mobile">Log out</button></li> 
         </ul>
         <span id="nav-user"></span>
-        <button id="logout-btn">Log out</button>
+        <button id="logout-btn" class="hidden">Log out</button>
+        <button id="login-btn-nav">Log in</button>
     </nav>
 
     <!----------------------
-    VIEW: LOGIN
+    MODAL: LOGIN
     ----------------------->
 
-    <section id="login-view">
-        <div class="login-header">
-            <span class="logo">Review Room</span>
-        </div>
-
+    <div id="login-modal" class="modal-overlay hidden">
         <div class="login-card">
+            <button id="close-login-modal" class="modal-close">✕</button>
             <h1>Log in</h1>
 
             <form id="login-form">
@@ -61,13 +60,13 @@
                 <p>test@mail.com / 123456</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <!----------------------
     VIEW: HOME
     ----------------------->
 
-    <section id="home-view" class="hidden">
+    <section id="home-view">
 
         <div id="hero">
             <div class="hero-bg"></div>
