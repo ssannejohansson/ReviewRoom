@@ -664,4 +664,604 @@ export const shows: Show[] = [
     createdAt: new Date().toISOString(),
     createdBy: "seed",
   },
+  {
+    id: "21",
+    title: "True Detective",
+    description:
+      "An anthology crime series in which a single case is told through multiple perspectives, exploring the dark side of human nature across different times and locations.",
+    genre: "Crime/Thriller",
+    year: 2014,
+    imageUrl: "https://image.tmdb.org/t/p/w500/zYqVTiHK5ZajYcNzAW7qWte5NWS.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Season one is untouchable",
+        author: "rust@example.com",
+        rating: 5,
+        comment:
+          "McConaughey and Harrelson are absolutely electric together. The long take in episode four alone is worth the entire watch. One of the greatest seasons of television ever made.",
+        createdAt: "2024-09-12T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "marty@example.com",
+        rating: 4,
+        comment:
+          "Season one is a masterpiece. Later seasons don't quite reach those heights but the anthology format keeps things fresh and interesting.",
+        createdAt: "2025-01-08T18:30:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "22",
+    title: "Vikings",
+    description:
+      "The legendary Norse warrior Ragnar Lothbrok rises from farmer to king, leading his people on raids across England and France while navigating betrayal and political intrigue.",
+    genre: "Historical Drama",
+    year: 2013,
+    imageUrl: "https://image.tmdb.org/t/p/w500/bQLrHIRNEkE3PdIWQrZHynQZazu.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Epic in every sense of the word",
+        author: "ragnar@example.com",
+        rating: 5,
+        comment:
+          "Travis Fimmel is magnetic as Ragnar. The battle sequences are breathtaking and the Norse mythology woven throughout gives it a unique identity unlike any other historical drama.",
+        createdAt: "2024-07-22T19:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "lagertha@example.com",
+        rating: 4,
+        comment:
+          "The early seasons are some of the best historical drama ever made. It loses a little steam later on but the sheer scale and ambition never wavers.",
+        createdAt: "2025-02-14T21:15:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "23",
+    title: "Outlander",
+    description:
+      "A WWII combat nurse is mysteriously transported back to 18th century Scotland, where she is caught between two very different men and two very different lives.",
+    genre: "Drama/Romance",
+    year: 2014,
+    imageUrl: "https://image.tmdb.org/t/p/w500/oftZNfyTVNU7IfOqoGLoT8MGvNs.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Completely unlike anything else on TV",
+        author: "claire@example.com",
+        rating: 5,
+        comment:
+          "The Scottish Highlands have never looked more stunning. The central romance is genuinely compelling and the historical detail is impressive. Caitriona Balfe carries the whole show effortlessly.",
+        createdAt: "2024-10-03T20:30:00.000Z",
+      },
+      {
+        id: "2",
+        author: "jamie@example.com",
+        rating: 4,
+        comment:
+          "Sweeping, romantic and surprisingly brutal at times. Not what you expect but absolutely worth sticking with through the slower episodes.",
+        createdAt: "2025-01-17T17:45:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "24",
+    title: "1883",
+    description:
+      "The origin story of the Yellowstone Dutton family as they journey west through the Great Plains, enduring hardship, violence, and loss to find a place to call home.",
+    genre: "Drama/Western",
+    year: 2021,
+    imageUrl: "https://image.tmdb.org/t/p/w500/waLbm384SQDwLTCn6ttPqQS5kfV.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The best western since Deadwood",
+        author: "elsa@example.com",
+        rating: 5,
+        comment:
+          "Isabel May's narration is hauntingly beautiful. The show captures the brutal reality of westward expansion without romanticising it. Tim McGraw and Faith Hill are a revelation.",
+        createdAt: "2024-08-19T21:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "james@example.com",
+        rating: 5,
+        comment:
+          "Genuinely moved me in ways I did not expect from a Yellowstone prequel. The finale is devastating. Absolutely unmissable television.",
+        createdAt: "2025-03-01T19:20:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "25",
+    title: "The Last Kingdom",
+    description:
+      "A Saxon nobleman raised by Vikings fights to reclaim his birthplace and help unite England under King Alfred, torn between two cultures and two identities.",
+    genre: "Historical Drama",
+    year: 2015,
+    imageUrl: "https://image.tmdb.org/t/p/w500/8eJf0hxgIhE6QSxbtuNCekTddy1.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Utterly gripping from start to finish",
+        author: "uhtred@example.com",
+        rating: 5,
+        comment:
+          "Alexander Dreymon is outstanding as Uhtred. The show balances political intrigue, brutal combat and genuine character development better than almost anything else in the genre.",
+        createdAt: "2024-06-25T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "brida@example.com",
+        rating: 4,
+        comment:
+          "Criminally underrated. Far better than most historical dramas and it only gets stronger as the seasons go on. Destiny is all.",
+        createdAt: "2024-12-18T18:10:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "26",
+    title: "We Were the Lucky Ones",
+    description:
+      "Based on a true story, a Jewish Polish family is separated at the outbreak of WWII and each member fights for survival across three continents, determined to reunite.",
+    genre: "Historical Drama",
+    year: 2024,
+    imageUrl: "https://image.tmdb.org/t/p/w500/rRv6Lji53tXnP1h6UGYDQVx4FGg.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "One of the most important shows in years",
+        author: "nechuma@example.com",
+        rating: 5,
+        comment:
+          "Joey King is extraordinary. The show handles an almost unimaginable story with immense care and humanity. I sobbed through most of it and could not stop watching.",
+        createdAt: "2024-05-14T20:30:00.000Z",
+      },
+      {
+        id: "2",
+        author: "jakob@example.com",
+        rating: 5,
+        comment:
+          "Devastating, hopeful and beautifully made. The true story behind it makes every episode hit even harder. Essential viewing.",
+        createdAt: "2024-09-07T17:00:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "27",
+    title: "Snowfall",
+    description:
+      "Set in 1983 Los Angeles, a young man gets pulled into the crack cocaine epidemic that would soon devastate American cities, navigating rival dealers, the CIA, and his own ambition.",
+    genre: "Crime/Drama",
+    year: 2017,
+    imageUrl: "https://image.tmdb.org/t/p/w500/y7ntzl7msiaS6o7dvDbNG7XFYcR.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The most underrated crime drama on television",
+        author: "franklin@example.com",
+        rating: 5,
+        comment:
+          "Damson Idris is a genuine star. The show builds slowly but by season three it is as gripping as anything on TV. The way it portrays the crack epidemic from every angle is remarkable.",
+        createdAt: "2024-08-30T20:15:00.000Z",
+      },
+      {
+        id: "2",
+        author: "lucia@example.com",
+        rating: 4,
+        comment:
+          "Takes a couple of seasons to find its footing but once it does it is absolutely riveting. The family dynamics at the centre of it all are what make it truly special.",
+        createdAt: "2025-01-06T19:40:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "28",
+    title: "Lost",
+    description:
+      "The survivors of a plane crash are stranded on a mysterious island full of secrets, supernatural forces, and other dangerous inhabitants who may not want them to leave.",
+    genre: "Drama/Mystery",
+    year: 2004,
+    imageUrl: "https://image.tmdb.org/t/p/w500/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Nothing has ever hooked me faster",
+        author: "jack@example.com",
+        rating: 5,
+        comment:
+          "The pilot is still one of the greatest episodes of television ever made. The ensemble cast is incredible and the mystery kept me up night after night. A genuine cultural phenomenon.",
+        createdAt: "2024-07-04T21:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "kate@example.com",
+        rating: 4,
+        comment:
+          "The first three seasons are some of the most addictive TV ever made. The ending divides people but the journey absolutely justifies every minute.",
+        createdAt: "2024-11-10T18:20:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "29",
+    title: "Mayans M.C.",
+    description:
+      "A Sons of Anarchy spinoff following EZ Reyes, a prospect in the Mayans motorcycle club on the US-Mexico border, as he navigates loyalty, family, and cartel politics.",
+    genre: "Crime/Drama",
+    year: 2018,
+    imageUrl: "https://image.tmdb.org/t/p/w500/510A0upV9WRAynEgs1E2B3eBxi5.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Surpasses its predecessor in many ways",
+        author: "ez@example.com",
+        rating: 5,
+        comment:
+          "JD Pardo brings incredible depth to EZ. The show tackles immigration, identity and family loyalty in ways Sons of Anarchy never did. By season three it is genuinely unmissable.",
+        createdAt: "2024-10-21T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "angel@example.com",
+        rating: 4,
+        comment:
+          "Darker and more politically aware than Sons of Anarchy. The border setting gives it a completely different feel and the cartel storylines are gripping.",
+        createdAt: "2025-02-19T17:30:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "30",
+    title: "24",
+    description:
+      "Counter Terrorism Unit agent Jack Bauer races against the clock to prevent catastrophic attacks on America, with each season unfolding in real time over a single day.",
+    genre: "Action/Thriller",
+    year: 2001,
+    imageUrl: "https://image.tmdb.org/t/p/w500/iq6yrZ5LEDXf1ArCOYLq8PIUBpV.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The original edge of your seat thriller",
+        author: "ctu@example.com",
+        rating: 5,
+        comment:
+          "Kiefer Sutherland defined a generation of action television. The real time format is a stroke of genius and seasons one through five are relentlessly gripping.",
+        createdAt: "2024-06-05T21:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "chloe@example.com",
+        rating: 4,
+        comment:
+          "Absolutely addictive. The cliffhangers at the end of every episode are brutal. Even when the plots get outlandish you cannot stop watching.",
+        createdAt: "2024-10-28T19:15:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "31",
+    title: "The Night Of",
+    description:
+      "A Pakistani-American college student wakes up next to a murdered woman with no memory of what happened, and a public defender takes on his seemingly unwinnable case.",
+    genre: "Crime/Drama",
+    year: 2016,
+    imageUrl: "https://image.tmdb.org/t/p/w500/q13XJHdnsmxQL9rXRcnNDrZGHjO.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The most gripping miniseries I have ever seen",
+        author: "naz@example.com",
+        rating: 5,
+        comment:
+          "John Turturro gives a career defining performance. The show dissects the American justice system with devastating precision. Every episode left me breathless.",
+        createdAt: "2024-09-02T20:30:00.000Z",
+      },
+      {
+        id: "2",
+        author: "stone@example.com",
+        rating: 5,
+        comment:
+          "Flawless from start to finish. The atmosphere is oppressive and brilliant. One of the finest pieces of crime television ever made.",
+        createdAt: "2025-01-30T18:45:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "32",
+    title: "Sharp Objects",
+    description:
+      "A journalist with a troubled past returns to her small Missouri hometown to cover the murders of two young girls, uncovering dark secrets about her own family.",
+    genre: "Crime/Thriller",
+    year: 2018,
+    imageUrl: "https://image.tmdb.org/t/p/w500/1SGovj2qDdkJexvhFiXllj9EYfu.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Haunting and beautifully made",
+        author: "camille@example.com",
+        rating: 5,
+        comment:
+          "Amy Adams is absolutely incredible. The Southern Gothic atmosphere is suffocating in the best possible way and the final episode left me completely stunned.",
+        createdAt: "2024-08-11T21:15:00.000Z",
+      },
+      {
+        id: "2",
+        author: "adora@example.com",
+        rating: 4,
+        comment:
+          "Slow and deliberate but deeply rewarding. Patricia Clarkson is terrifying. The ending reframes everything you thought you understood.",
+        createdAt: "2025-02-22T19:00:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "33",
+    title: "Queen of the South",
+    description:
+      "A young Mexican woman flees to the United States after her drug dealer boyfriend is murdered, and slowly rises through the criminal underworld to become a cartel queenpin.",
+    genre: "Crime/Drama",
+    year: 2016,
+    imageUrl: "https://image.tmdb.org/t/p/w500/rzdC5EHkkKJE6OPVdh6gT1pR1c9.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Alice Braga carries this show on her back",
+        author: "teresa@example.com",
+        rating: 5,
+        comment:
+          "The transformation Teresa goes through over five seasons is extraordinary. A smart, stylish crime drama that never gets the credit it deserves.",
+        createdAt: "2024-07-08T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "james@example.com",
+        rating: 4,
+        comment:
+          "Gripping and fast paced. The cartel world feels dangerous and real. Gets better with every season as Teresa's power grows.",
+        createdAt: "2024-12-05T17:50:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "34",
+    title: "Weeds",
+    description:
+      "A recently widowed suburban mother begins selling marijuana to maintain her family's affluent lifestyle, gradually getting pulled deeper into the criminal underworld.",
+    genre: "Comedy/Drama",
+    year: 2005,
+    imageUrl: "https://image.tmdb.org/t/p/w500/gKUsBTa5b0GY7U4iWBseeBalfjO.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Mary-Louise Parker is a national treasure",
+        author: "nancy@example.com",
+        rating: 5,
+        comment:
+          "Funny, dark and completely unpredictable. Nancy Botwin is one of the most compelling antiheroes on television and the show is never afraid to go somewhere truly unexpected.",
+        createdAt: "2024-06-14T19:30:00.000Z",
+      },
+      {
+        id: "2",
+        author: "silas@example.com",
+        rating: 4,
+        comment:
+          "The first three seasons are brilliant. It gets wilder as it goes but the central performance keeps you invested no matter how crazy things get.",
+        createdAt: "2025-01-12T18:00:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "35",
+    title: "Fargo",
+    description:
+      "An anthology crime series inspired by the Coen Brothers film, each season telling a darkly comic tale of murder, greed, and human folly in the frozen American Midwest.",
+    genre: "Crime/Drama",
+    year: 2014,
+    imageUrl: "https://image.tmdb.org/t/p/w500/a3VW6khsyUVKrG0GBCWFG3NzWPX.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "As good as the film it was inspired by",
+        author: "molly@example.com",
+        rating: 5,
+        comment:
+          "Each season is its own masterpiece. The writing is sharp and funny and deeply unsettling all at once. Billy Bob Thornton in season one is one of the greatest TV villain performances ever.",
+        createdAt: "2024-09-29T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "lorne@example.com",
+        rating: 5,
+        comment:
+          "Endlessly inventive. The anthology format means each season feels completely fresh while maintaining the same darkly comic DNA. There is nothing else quite like it.",
+        createdAt: "2025-02-10T18:30:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "36",
+    title: "The Affair",
+    description:
+      "A summer romance between a married waitress and a married novelist tears apart both their families, told through the unreliable perspectives of each person involved.",
+    genre: "Drama",
+    year: 2014,
+    imageUrl: "https://image.tmdb.org/t/p/w500/8scKJeu6GoxMqpt7UO5aMeU0TOn.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The unreliable narrator device is brilliantly used",
+        author: "helen@example.com",
+        rating: 4,
+        comment:
+          "Seeing the same scenes from two completely different perspectives is genuinely fascinating. The show asks difficult questions about memory, truth and desire without easy answers.",
+        createdAt: "2024-11-06T19:45:00.000Z",
+      },
+      {
+        id: "2",
+        author: "noah@example.com",
+        rating: 4,
+        comment:
+          "Ruth Wilson is extraordinary. The show is messy and flawed like real relationships are. More emotionally honest than most dramas dare to be.",
+        createdAt: "2025-03-03T17:20:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "37",
+    title: "1923",
+    description:
+      "A Yellowstone prequel following the Dutton family during the Great Depression and Prohibition era, as patriarch Jacob Dutton fights to protect the ranch from land barons and corruption.",
+    genre: "Drama/Western",
+    year: 2022,
+    imageUrl: "https://image.tmdb.org/t/p/w500/zgZRJZvZn5cpsWAB0zMUdad3iZd.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Harrison Ford and Helen Mirren are everything",
+        author: "jacob@example.com",
+        rating: 5,
+        comment:
+          "Two of Hollywood's greatest actors at the absolute top of their game. The Montana landscape is stunning and the story is gripping from the very first scene.",
+        createdAt: "2024-08-25T20:30:00.000Z",
+      },
+      {
+        id: "2",
+        author: "cara@example.com",
+        rating: 4,
+        comment:
+          "A worthy companion to 1883. The dual storylines keep things moving and the period detail is impressive. Helen Mirren alone is worth the price of admission.",
+        createdAt: "2025-01-31T19:00:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "38",
+    title: "Top Boy",
+    description:
+      "A gritty portrayal of drug dealers and gang life on a London housing estate, following Dushane and Sully as they fight to maintain control of their operation across decades.",
+    genre: "Crime/Drama",
+    year: 2011,
+    imageUrl: "https://image.tmdb.org/t/p/w500/iBqgEMnbleoeLqdadlvBGDxVvKb.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "The British answer to The Wire",
+        author: "dushane@example.com",
+        rating: 5,
+        comment:
+          "Brutally realistic and deeply human. Ashley Walters and Kane Robinson have extraordinary chemistry. The Netflix revival is as good as anything the show has ever done.",
+        createdAt: "2024-10-14T20:15:00.000Z",
+      },
+      {
+        id: "2",
+        author: "sully@example.com",
+        rating: 5,
+        comment:
+          "Nothing on British television comes close to this. The estate feels completely real, the characters are complex and the storytelling is fearless.",
+        createdAt: "2025-02-28T18:40:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "39",
+    title: "Euphoria",
+    description:
+      "A group of high school students in a small American town navigate identity, trauma, addiction, and love in a visually stunning and brutally honest portrait of modern youth.",
+    genre: "Drama",
+    year: 2019,
+    imageUrl: "https://image.tmdb.org/t/p/w500/aJrG7OkoTMPWG5c8opz8a93AZPY.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Unlike anything else on television",
+        author: "rue@example.com",
+        rating: 5,
+        comment:
+          "Zendaya gives one of the greatest performances in the history of television. The show is visually extraordinary and emotionally devastating. It captures something real about modern adolescence.",
+        createdAt: "2024-09-18T21:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "jules@example.com",
+        rating: 4,
+        comment:
+          "Overwhelming and brilliant. Not easy viewing but important and unforgettable. The cinematography alone makes it worth watching.",
+        createdAt: "2025-01-26T19:30:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
+  {
+    id: "40",
+    title: "The Fall",
+    description:
+      "A determined Metropolitan Police detective is sent to Belfast to review a stalled murder investigation and finds herself in a cat and mouse game with an active serial killer.",
+    genre: "Crime/Thriller",
+    year: 2013,
+    imageUrl: "https://image.tmdb.org/t/p/w500/fm7nN3nUADA7JGgnFNlOWpXn1tf.jpg",
+    reviews: [
+      {
+        id: "1",
+        title: "Gillian Anderson has never been better",
+        author: "stella@example.com",
+        rating: 5,
+        comment:
+          "The show is a masterclass in slow burn tension. Anderson and Dornan are magnetic together. What makes it unique is how it humanises the killer without excusing him for a single second.",
+        createdAt: "2024-11-25T20:00:00.000Z",
+      },
+      {
+        id: "2",
+        author: "spector@example.com",
+        rating: 5,
+        comment:
+          "Deeply unsettling and completely gripping. The Belfast setting adds a layer of atmosphere that is hard to shake. One of the finest crime dramas Britain has ever produced.",
+        createdAt: "2025-03-07T18:15:00.000Z",
+      },
+    ],
+    createdAt: new Date().toISOString(),
+    createdBy: "seed",
+  },
 ];

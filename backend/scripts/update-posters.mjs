@@ -6,13 +6,27 @@ const API_KEY = process.env.TMDB_API_KEY;
 const BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
 const shows = [
-  { id: "14", title: "The Sopranos", year: 1999 },
-  { id: "15", title: "Mindhunter", year: 2017 },
-  { id: "16", title: "Landman", year: 2024 },
-  { id: "17", title: "Mayor of Kingstown", year: 2021 },
-  { id: "18", title: "Animal Kingdom", year: 2016 },
-  { id: "19", title: "Narcos", year: 2015 },
   { id: "20", title: "Prison Break", year: 2005 },
+  { id: "21", title: "True Detective", year: 2014 },
+  { id: "22", title: "Vikings", year: 2013 },
+  { id: "23", title: "Outlander", year: 2014 },
+  { id: "24", title: "1883", year: 2021 },
+  { id: "25", title: "The Last Kingdom", year: 2015 },
+  { id: "26", title: "We Were the Lucky Ones", year: 2024 },
+  { id: "27", title: "Snowfall", year: 2017 },
+  { id: "28", title: "Lost", year: 2004 },
+  { id: "29", title: "Mayans M.C.", year: 2018 },
+  { id: "30", title: "24", year: 2001 },
+  { id: "31", title: "The Night Of", year: 2016 },
+  { id: "32", title: "Sharp Objects", year: 2018 },
+  { id: "33", title: "Queen of the South", year: 2016 },
+  { id: "34", title: "Weeds", year: 2005 },
+  { id: "35", title: "Fargo", year: 2014 },
+  { id: "36", title: "The Affair", year: 2014 },
+  { id: "37", title: "1923", year: 2022 },
+  { id: "38", title: "Top Boy", year: 2011 },
+  { id: "39", title: "Euphoria", year: 2019 },
+  { id: "40", title: "The Fall", year: 2013 },
 ];
 
 async function fetchPoster(title, year) {
