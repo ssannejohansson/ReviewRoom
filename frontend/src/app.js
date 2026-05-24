@@ -51,7 +51,7 @@ const showError = document.getElementById("shows-error");
 const addShowNavItem = document.getElementById("add-show-nav-item");
 const loginModal = document.getElementById("login-modal");
 const loginBtnNav = document.getElementById("login-btn-nav");
-const loginBtnMobile = document.getElementById("login-btn-mobile");
+const loginBtnNavMobile = document.getElementById("login-btn-mobile");
 
 /* ----------------------
 SHOW / HIDE VIEWS
@@ -108,12 +108,6 @@ onAuthStateChanged(auth, async (user) => {
         addShowNavItem.classList.add("hidden");
     }
 });
-
-/* ----------------------
-INIT
----------------------- */
-
-loadShows();
 
 /* ----------------------
 LOGIN
@@ -223,6 +217,12 @@ const loadShows = async () => {
         showError.classList.remove("hidden");
     }
 };
+
+/* ----------------------
+INIT
+---------------------- */
+
+loadShows();
 
 /* ----------------------
 HERO BACKGROUND COLLAGE
@@ -462,7 +462,7 @@ document.getElementById("profile-link").addEventListener("click", async (e) => {
         openLoginModal();
         return;
     }
-    
+
     const token = await user.getIdToken();
 
     try {
