@@ -32,7 +32,9 @@ const auth = getAuth(app);
 CONSTANTS
 ---------------------- */
 
-const API = "https://assesssment3.onrender.com";
+const API = window.location.hostname === "localhost" ?
+    "http://localhost:3000" :
+    "https://assesssment3.onrender.com";
 
 /* ----------------------
 DOM ELEMENTS
